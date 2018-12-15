@@ -39,12 +39,16 @@ func main() {
 					return // quit the application.
 				}
 
+				// the following 2 Stages seem to be the only ones that work
+				// as you would expect. StageInvisible doesn't work on Windows OS
+				// but this may be different on other systems.
 				if e.To == lifecycle.StageFocused {
 					fmt.Println("window now has the focus")
 				}
 				if e.From == lifecycle.StageFocused {
 					fmt.Println("window has lost the focus")
 				}
+				// we'll add other events as they are discovered...
 			}
 		}
 

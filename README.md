@@ -1,4 +1,7 @@
 # go-window
+NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
+I find with other OS's
+
 ### Creating an empty gui window in go for rendering 2D/3D graphics
 
 The goal is to create a bare bones window for any operating system (OS) with basic event handlers 
@@ -30,6 +33,11 @@ being abstracted away and ready to use.
 
 Study the README in each folder for some more detailed explanations and observations I had while coding
 up the source.
+
+## Important!
+For futher documentation, see the imported lib's and look for them in GoDoc, particulalry golang.org/x/exp/shiny,
+golang.org/x/exp/shiny/screen and mobile/event to get started with. 
+Reading them along while reading this code will be very helpful!
 
 
 
