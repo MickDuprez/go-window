@@ -43,8 +43,8 @@ up the source.
 For futher documentation, see the imported lib's and look for them in GoDoc, particulalry golang.org/x/exp/shiny,
 golang.org/x/exp/shiny/screen and mobile/event to get started with. 
 Reading them along while reading this code will be very helpful!
-NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
-I find with other OS's
+__NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
+I find with other OS's__
 
 
 
