@@ -1,9 +1,6 @@
 # go-window
-NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
-I find with other OS's
 
 ### Creating an empty gui window in go for rendering 2D/3D graphics
-
 The goal is to create a bare bones window for any operating system (OS) with basic event handlers 
 and graphics buffer/s ready to draw pixels to. It can be used to create simple 2D/3D graphics 
 from 'absolute' scratch (i.e. pixels!) for games or image viewing and editing etc.
@@ -18,6 +15,14 @@ and can seem more confusing than enlightening so I thought I'd document my findi
 windowing library from as low a level as possible.
 I'm also learning Go so this is as good a project as any to stretch the old grey cells with and I welcome any
 comments/suggestions/corrections :)
+
+### What this project won't or can't provide
+Due to limitations in the go libraries and my lack of knowledge of said lib's there will
+be no bells and whistles like title bar icons, message boxes, UI widgets and other things you
+would require for a 'proper' desktop application. For these I'd recomend one of the Go wrapped
+GUI frameworks such as QT, GTK or WxWidgets et al.
+This project is built purely for low overhead with good performance and to develop and display 
+graphics using software rendering in Go so I wanted this to be as lean as possible.
 
 ### What about OpenGL/DirectX et al?
 The whole purpose of this windowing library is for learning and experimentation and to discover how these
@@ -38,6 +43,8 @@ up the source.
 For futher documentation, see the imported lib's and look for them in GoDoc, particulalry golang.org/x/exp/shiny,
 golang.org/x/exp/shiny/screen and mobile/event to get started with. 
 Reading them along while reading this code will be very helpful!
+NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
+I find with other OS's
 
 
 
