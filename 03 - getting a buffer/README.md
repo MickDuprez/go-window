@@ -22,7 +22,7 @@ Once you are done drawing pixels you tell the window to upload the screen buffer
 the results.
 
 So far this is working well but I would love any feedback on how to do this better. The examples
-mentioned in the docks are a bit ambitious to take in just to get a basic window and they use
+mentioned in the doc's are a bit ambitious to take in just to get a basic window and they use
 different libraries than used here.
 
 
