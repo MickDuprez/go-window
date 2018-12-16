@@ -8,7 +8,7 @@ The screen buffer/s can be of arbitrary sizes and could be arranged to fit withi
 the main window to create multiple panels of different graphics buffers. These can be
 used for things like different views or scales of the same image.
 The screen buffer/s needs to be renewed on resizing of the main window to resize itself.
-there doesn't appear to be any methods to resize it which makes sense as it would
+There doesn't appear to be any methods to resize it which makes sense as it would
 have to return a new buffer anyway to organise memory.
 There is also a Texture you can grab from the screen which I haven't looked into yet.
 
