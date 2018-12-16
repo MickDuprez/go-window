@@ -1,7 +1,7 @@
 # go-window
 
 ### Creating an empty gui window in go for rendering 2D/3D graphics
-This project creates a bare bones GUI window for any operating system (OS) with basic event handlers 
+This project creates a bare bones GUI window for any Windows/Linux/Mac with basic event handlers 
 and graphics buffer/s ready to draw pixels to. It can be used to create simple 2D/3D graphics 
 from 'absolute' scratch (i.e. pixels!) for games or image viewing and editing etc.
 Yes, there definitely libraries out there ready to go for building games or GUI's but they abstract
