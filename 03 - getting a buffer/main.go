@@ -53,6 +53,8 @@ func main() {
 			log.Fatalf("%v - failed to create screen buffer", err)
 		}
 		defer screenBuffer.Release()
+		// pixBuffer is like a 'back bufffer' and it's what we do our drawing to.
+		pixBuffer := screenBuffer.RGBA()
 
 		for {
 			// Handle window events:
@@ -66,6 +68,9 @@ func main() {
 				if err != nil {
 					log.Fatalf("couldn't create new buffer at size.Event - %v", err)
 				}
+				// we need to get a new pixel buffer here so we get a buffer of
+				// the right size
+				pixBuffer = screenBuffer.RGBA()
 
 			case key.Event:
 				if e.Code == key.CodeEscape {
@@ -82,26 +87,23 @@ func main() {
 				// w.Fill(image.Rect(0, 0, 800, 650), color.Black, screen.Src)
 				w.Fill(sizeEvent.Bounds(), color.Black, screen.Src)
 
-				// here's where we do our drawing, this will be factored out later.
-				// we need a new pixel buffer each re-paint so we get a buffer of
-				// the right size
-				pixBuffer := screenBuffer.RGBA()
-				// 200 pixel white (standard color.Color) square at 100 down and 100 across from window edge
+				// ---- START DRAWING CODE -----
+				// 200 pixel square at 100 down and 100 across from window edge
+				// using the 'Set' method, limited colors only.
 				x_start, x_finish, y_start, y_finish := 100, 200, 100, 200
 				for x := x_start; x < x_finish; x++ {
 					for y := y_start; y < y_finish; y++ {
 						pixBuffer.Set(x, y, color.White)
 					}
 				}
-
-				// now let's draw a red line using SetRGBA hex values:
+				// now let's draw a red line using SetRGBA hex values.
 				for x := 300; x < 550; x++ {
 					pixBuffer.SetRGBA(x, x, color.RGBA{0xff, 0x00, 0x00, 0xff})
 				}
+				// ---- END DRAWING CODE ----------
 
-				// upload any pixel buffers (Textures)
+				// upload the pixBuffer (or SwapBuffers if you like)
 				w.Upload(image.Point{0, 0}, screenBuffer, sizeEvent.Bounds())
-
 				// finfished drawing etc, swap back buffer to front:
 				w.Publish()
 
