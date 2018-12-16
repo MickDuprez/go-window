@@ -1,15 +1,14 @@
 # go-window
 
 ### Creating an empty gui window in go for rendering 2D/3D graphics
-The goal is to create a bare bones window for any operating system (OS) with basic event handlers 
+This project creates a bare bones GUI window for any operating system (OS) with basic event handlers 
 and graphics buffer/s ready to draw pixels to. It can be used to create simple 2D/3D graphics 
 from 'absolute' scratch (i.e. pixels!) for games or image viewing and editing etc.
 Yes, there definitely libraries out there ready to go for building games or GUI's but they abstract
 away all the very things I want to learn.
 
-Creating a window and getting to the 'buffer' is more trivial in other languages like Java, Python, C# C/C++ etc 
-and it's a well troden path. Go however, being more focused on systems programming rather than desktop 
-GUI applications, is proving to be a lot harder.
+The project uses libraries from golang.org/x/exp/shiny and golang.org/x/mobile/event and produce a
+blank native styled window with title bar and menu, there are no options for border styles etc.
 The GoDoc's, while very good have some unusual terminologies for things if you come from say a win32 background
 and can seem more confusing than enlightening so I thought I'd document my findings as I build up this basic 
 windowing library from as low a level as possible.
@@ -26,10 +25,10 @@ graphics using software rendering in Go so I wanted this to be as lean as possib
 
 ### What about OpenGL/DirectX et al?
 The whole purpose of this windowing library is for learning and experimentation and to discover how these
-graphics libraries work under the hood. While combing the internets, a questions such as "I want to create
-a graphics engine from scratch" is usually replied with "don't waste your time, that tech is dead" and other
-such un-inspiring comments but I think there is real value in learning these things from the bottom up.
-If you're reading this, you love go and you want to learn graphics, hopefully this repo will be of some use.
+graphics libraries work under the hood. While there are good arguments for using these driver API's it's still good
+to know how to do basic graphics at the lower level, not only for learning but for things like micro controllers
+with a simple LCD screen say to build an old style arcade cabinet or an equipment monitoring console etc.
+Anyway, if you're reading this and you love Go and want to learn graphics, hopefully this repo will be of some use.
 
 ## Repo Structure and Usage
 This repo is structured in lesson like folders that start from displaying a bare bones empty window with
@@ -43,6 +42,7 @@ up the source.
 For futher documentation, see the imported lib's and look for them in GoDoc, particulalry golang.org/x/exp/shiny,
 golang.org/x/exp/shiny/screen and mobile/event to get started with. 
 Reading them along while reading this code will be very helpful!
+
 __NOTE: This repo is being developed on a Windows OS, as I get time I will confirm/update differences
 I find with other OS's__
 
