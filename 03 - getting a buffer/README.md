@@ -5,8 +5,8 @@ This is as bare bones as you can get to have a simple window to draw pixels to.
 Once you have set up the main window you need to get one or more screen Buffers.
 From what I can tell, the screen buffer is what the window calls to display the image.
 The screen buffer/s can be of arbitrary sizes and could be arranged to fit within
-the main window to create multiple panels of different graphics buffers for
-things like different views or scales of the same image.
+the main window to create multiple panels of different graphics buffers. These can be
+used for things like different views or scales of the same image.
 The screen buffer/s needs to be renewed on resizing of the main window to resize itself.
 there doesn't appear to be any methods to resize it which makes sense as it would
 have to return a new buffer anyway to organise memory.
