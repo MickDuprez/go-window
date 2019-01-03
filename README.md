@@ -15,6 +15,9 @@ windowing library from as low a level as possible.
 I'm also learning Go so this is as good a project as any to stretch the old grey cells with and I welcome any
 comments/suggestions/corrections :)
 
+### Sample of output
+![sample output](https://github.com/MickDuprez/go-window/blob/master/go-window_03.JPG)
+
 ### What this project won't or can't provide
 Due to limitations in the go libraries and my lack of knowledge of said lib's there will
 be no bells and whistles like title bar icons, message boxes, UI widgets and other things you
