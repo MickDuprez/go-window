@@ -65,6 +65,7 @@ func main() {
 				// we need to create a new screen buffer, there's no way to resize the old one
 				screenBuffer.Release()
 				screenBuffer, err = s.NewBuffer(image.Point{e.WidthPx, e.HeightPx})
+
 				if err != nil {
 					log.Fatalf("couldn't create new buffer at size.Event - %v", err)
 				}
@@ -88,16 +89,31 @@ func main() {
 				w.Fill(sizeEvent.Bounds(), color.Black, screen.Src)
 
 				// ---- START DRAWING CODE -----
-				// 200 pixel square at 100 down and 100 across from window edge
+				// 256 pixel square at 100 down and 100 across from window edge
 				// using the 'Set' method, limited colors only.
-				x_start, x_finish, y_start, y_finish := 100, 200, 100, 200
+				x_start, x_finish, y_start, y_finish := 100, 256, 100, 256
 				for x := x_start; x < x_finish; x++ {
 					for y := y_start; y < y_finish; y++ {
 						pixBuffer.Set(x, y, color.White)
 					}
 				}
+
+				// 256 pixel square at 100 down and 300 across from window edge
+				// using the 'SetRGBA' method, colors calculated in loop.
+				// NOTE: see https://lodev.org/cgtutor/quickcg.html
+				x_start, x_finish, y_start, y_finish = 300, 556, 100, 356
+				var ciX, ciY uint8 // color index counter
+				for x := x_start; x < x_finish; x++ {
+					for y := y_start; y < y_finish; y++ {
+						pixBuffer.SetRGBA(x, y, color.RGBA{ciX, ciY, uint8(128), 0xff})
+
+						ciY++
+					}
+					ciX++
+				}
+
 				// now let's draw a red line using SetRGBA hex values.
-				for x := 300; x < 550; x++ {
+				for x := 400; x < 550; x++ {
 					pixBuffer.SetRGBA(x, x, color.RGBA{0xff, 0x00, 0x00, 0xff})
 				}
 				// ---- END DRAWING CODE ----------
