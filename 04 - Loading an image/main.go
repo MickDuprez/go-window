@@ -60,7 +60,7 @@ func main() {
 			drawScene(w)
 			w.Upload(image.Point{0, 0}, screenBuffer, screenBuffer.Bounds())
 			w.Publish()
-			time.Sleep(time.Millisecond / 60)
+			time.Sleep(time.Millisecond * 16)
 
 			// print out the ms/frame value
 			frames++
