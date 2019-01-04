@@ -16,7 +16,8 @@ I'm also learning Go so this is as good a project as any to stretch the old grey
 comments/suggestions/corrections :)
 
 ### Sample of output
-![sample output](https://github.com/MickDuprez/go-window/blob/master/go-window_03.JPG)
+![simple window](https://github.com/MickDuprez/go-window/blob/master/go-window_03.JPG)
+![3d star field](https://github.com/MickDuprez/go-window/blob/master/06%20-%203D%20stars%20simulation/star3d.gif)
 
 ### What this project won't or can't provide
 Due to limitations in the go libraries and my lack of knowledge of said lib's there will
