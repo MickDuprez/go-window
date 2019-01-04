@@ -12,6 +12,6 @@ and set a base speed for the loop. This is placed after all rendering is done al
 it probably doesn't matter that much.
 
 ### Sample of output
-![sample output](https://github.com/MickDuprez/go-window/blob/master/04 - Loading an image/doom.JPG)
+![sample output](https://github.com/MickDuprez/go-window/blob/master/04%20-%20Loading%20an%20image/doom.JPG)
 
 

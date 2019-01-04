@@ -104,6 +104,8 @@ func drawScene(w screen.Window) {
 
 	// calculate the values to set the image to the center of the screen buffer.
 	// NOTE: this doesn't seem right and needs more investigation!
+	// I think it has a bit to do with the actual image size compared to the
+	// actual image displayed but still not sure...
 	imgRect := loadedImage.Bounds()
 	imgX := ((pixBuffer.Rect.Dx() - imgRect.Dx()) / 2) - imgRect.Dx()
 	imgY := ((pixBuffer.Rect.Dy() - imgRect.Dy()) / 2) - imgRect.Dy()
